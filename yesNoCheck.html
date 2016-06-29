@@ -1,0 +1,35 @@
+<script type="text/javascript">
+	function yesnoCheck() {
+		if (document.getElementById('yesCheck').checked) {
+			document.getElementById('ifYes').style.display = 'block';
+			$("#yesCheck").fadeIn("slow");
+		}
+		else document.getElementById('ifYes').style.display = 'none';
+		
+		if (document.getElementById('noCheck').checked) {
+			document.getElementById('ifNo').style.display = 'block';
+			$("#noCheck").fadeIn("slow");
+		}
+		else document.getElementById('ifNo').style.display = 'none';
+	}
+</script>
+
+<div class="form-group">
+	<label>Check your Yes No Element:</label>
+	<div style="display:inline-block;">
+		<input type="radio" value="Yes" name="checkYour" id="yesCheck" selected onclick="javascript:yesnoCheck();">
+		<label>Yes</label>
+	</div>
+	<div style="display:inline-block;">
+		<input type="radio" value="No" name="checkYour" id="noCheck" onclick="javascript:yesnoCheck();">
+		<label>No</label>
+	</div>
+</div>
+<div  style="margin-top:10px;" id="ifYes">
+	<label >Complications</label>
+	<input type="text" placeholder="Add Notes" value="notes">
+</div>
+<div style="margin-top:10px;" id="ifNo">
+	<label >Complications</label>
+	<textarea placeholder="Add Complications" name="complications"></textarea>
+</div>
